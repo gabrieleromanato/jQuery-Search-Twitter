@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery: Search Twitter plugin</title>
+<meta charset="utf-8" />
+<style type="text/css" media="screen">
+body {
+	background: #f2f2f2;
+	font: 90% Arial, sans-serif;
+}
+
+h2 {
+	font-size: 1.5em;
+	font-weight: normal;
+	margin: 0 0 6px 0;
+	text-align: center;
+	text-shadow: 1px 0 1px #333, 0 1px 1px #555;
+	text-transform: uppercase;
+}
+
+#twitter-search {
+	margin: 2em auto;
+	width: 30em;
+	padding: 1em;
+	background: #fff;
+	border: 1px solid #ccc;
+}
+
+div.tweet {
+	margin-bottom: 1em;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #ccc;
+}
+
+div.tweet small {
+	display: block;
+	color: #777;
+	padding: 4px 0;
+}
+
+div.tweet div {
+	padding-top: 4px;
+	border-top: 1px dotted #ccc;
+}
+
+div.tweet a {
+	color: #333;
+	text-decoration: none;
+	border-bottom: 1px solid;
+}
+
+div.tweet a:hover {
+	border-bottom-style: dashed;
+}
+</style>
+</head>
+
+<body>
+
+<div id="twitter-search">
+	<h2>On jQuery</h2>
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.search.twitter.js"></script>
+
+<script type="text/javascript">
+$(function() {
+
+	$('#twitter-search').searchTwitter({
+		term: 'jquery'
+	});
+
+});
+</script>
+</body>
+</html>
